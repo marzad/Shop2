@@ -16,10 +16,11 @@ public class ProductRepo {
 
     public ProductRepo(List<Product> products) {
         this.products = products;
+
     }
 
     public List<Product> getProducts() {
-        return products;
+        return this.products;
     }
 
     public void setProducts(List<String> list) {

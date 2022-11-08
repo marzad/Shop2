@@ -17,8 +17,13 @@ public class ShopService {
     public ShopService() {
     }
 
-    public ProductRepo getProductsList() {
-        return products;
+    public ShopService(ProductRepo products, OrderRepo orders){
+        this.products = products;
+        this.orders = orders;
+    }
+
+    public List<Product> getProductsList() {
+        return products.getProducts();
     }
 
     public boolean addProduct(String name){
