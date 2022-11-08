@@ -24,5 +24,18 @@ public class ProductRepo {
         this.products = products;
     }
 
+    public boolean addProduct(Product product){
+        return products.add(product);
+    }
+
+    public Product getProductByName(String name){
+        for(Product p: products){
+            if(p.getName().equals(name)){
+                return p;
+            }
+        }
+        return null;
+    }
+
 
 }

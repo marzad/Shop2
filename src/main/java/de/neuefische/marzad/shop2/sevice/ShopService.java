@@ -1,6 +1,7 @@
 package de.neuefische.marzad.shop2.sevice;
 
 import de.neuefische.marzad.shop2.model.Order;
+import de.neuefische.marzad.shop2.model.Product;
 import de.neuefische.marzad.shop2.repository.OrderRepo;
 import de.neuefische.marzad.shop2.repository.ProductRepo;
 import org.springframework.stereotype.Service;
@@ -16,15 +17,29 @@ public class ShopService {
     public ShopService() {
     }
 
-    public ProductRepo getProducts() {
+    public ProductRepo getProductsList() {
         return products;
     }
 
-    public OrderRepo getOrders() {
+    public boolean addProduct(Product product){
+        return products.addProduct(product);
+    }
+
+    public Product getProductByName(String name){
+        return products.getProductByName(name);
+    }
+
+    public OrderRepo getOrdersList() {
         return orders;
     }
 
-    public Order addOrder(Order order){
-
+    public boolean addOrder(Order order){
+        return orders.addOrder(order);
     }
+
+    public Order getOrder(int id){
+        return orders.getOrder(id);
+    }
+
+
 }
