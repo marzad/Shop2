@@ -14,7 +14,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("shop")
 public class ShopController {
-    private final ShopService shop;
+    private ShopService shop;
 
     public ShopController(ShopService shop) {
         this.shop = shop;
@@ -26,7 +26,7 @@ public class ShopController {
     }
 
     @GetMapping("api/products/{id}")
-    public Product getProductByID(@RequestParam int id){
+    public Product getProductByID(@PathVariable int id){
         Optional<Product> product = Optional.of(shop.getProductByID(id));
         return product.orElseGet(()-> null);
     }
