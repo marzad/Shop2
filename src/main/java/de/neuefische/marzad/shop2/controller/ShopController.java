@@ -1,6 +1,7 @@
 package de.neuefische.marzad.shop2.controller;
 
 import de.neuefische.marzad.shop2.model.Order;
+import de.neuefische.marzad.shop2.model.Product;
 import de.neuefische.marzad.shop2.repository.OrderRepo;
 import de.neuefische.marzad.shop2.repository.ProductRepo;
 import de.neuefische.marzad.shop2.sevice.ShopService;
