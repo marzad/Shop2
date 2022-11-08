@@ -6,6 +6,7 @@ import de.neuefische.marzad.shop2.repository.OrderRepo;
 import de.neuefische.marzad.shop2.repository.ProductRepo;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -29,12 +30,18 @@ public class ShopService {
         return products.getProductByName(name);
     }
 
+    public Product getProductByID(int id){
+        return products.getProductByID(id);
+    }
+
+
+
     public OrderRepo getOrdersList() {
         return orders;
     }
 
-    public boolean addOrder(Order order){
-        return orders.addOrder(order);
+    public boolean addOrder(List<Product> products){
+        return orders.addOrder(products);
     }
 
     public Order getOrder(int id){

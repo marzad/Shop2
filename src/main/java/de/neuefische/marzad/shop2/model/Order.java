@@ -9,7 +9,7 @@ public class Order {
     public Order() {
     }
 
-    public Order(List<Product> products, int id) {
+    public Order(int id, List<Product> products) {
         this.products = products;
         this.id = id;
     }
