@@ -1,7 +1,6 @@
 package de.neuefische.marzad.shop2.repository;
 
 import de.neuefische.marzad.shop2.model.Order;
-import de.neuefische.marzad.shop2.model.Product;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
