@@ -21,8 +21,8 @@ public class ShopService {
         return products;
     }
 
-    public boolean addProduct(Product product){
-        return products.addProduct(product);
+    public boolean addProduct(String name){
+        return products.addProduct(name);
     }
 
     public Product getProductByName(String name){

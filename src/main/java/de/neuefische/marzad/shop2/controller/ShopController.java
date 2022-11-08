@@ -53,7 +53,7 @@ public class ShopController {
     }
 
     @PostMapping("api/products")
-    public void addProduct(@RequestBody Product product){
-        shop.addProduct(product);
+    public void addProduct(@RequestBody String name){
+        shop.addProduct(name);
     }
 }

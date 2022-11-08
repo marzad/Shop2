@@ -9,6 +9,8 @@ import java.util.List;
 public class ProductRepo {
     private List<Product> products = new ArrayList<>();
 
+    private int id = 0;
+
     public ProductRepo() {
     }
 
@@ -20,12 +22,16 @@ public class ProductRepo {
         return products;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
+    public void setProducts(List<String> list) {
+        for(String str:list){
+            this.id ++;
+            products.add(new Product(this.id, str));
+        }
     }
 
-    public boolean addProduct(Product product){
-        return products.add(product);
+    public boolean addProduct(String name){
+        this.id ++;
+        return products.add(new Product(this.id,name));
     }
 
     public Product getProductByName(String name){
