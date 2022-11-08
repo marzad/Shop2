@@ -1,5 +1,6 @@
 package de.neuefische.marzad.shop2.repository;
 
+import de.neuefische.marzad.shop2.model.Product;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class ProductRepo {
 
     public Product getProductByName(String name){
         for(Product p: products){
-            if(p.getName().equals(name)){
+            if(p.name().equals(name)){
                 return p;
             }
         }
@@ -38,7 +39,7 @@ public class ProductRepo {
 
     public Product getProductByID(int id){
         for(Product p: products){
-            if(p.getId() == id){
+            if(p.id() == id){
                 return p;
             }
         }
