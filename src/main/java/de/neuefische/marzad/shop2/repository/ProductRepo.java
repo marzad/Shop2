@@ -1,10 +1,11 @@
 package de.neuefische.marzad.shop2.repository;
 
 import de.neuefische.marzad.shop2.model.Product;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Repository
 public class ProductRepo {
     private List<Product> products = new ArrayList<>();
 
