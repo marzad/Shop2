@@ -30,6 +30,16 @@ public class ShopService {
         return products.addProduct(name);
     }
 
+    public boolean addProductList(List<String> list){
+        try{
+            products.setProducts(list);
+            return true;
+        }
+        catch(Exception e){
+            return false;
+        }
+    }
+
     public Product getProductByName(String name){
         return products.getProductByName(name);
     }
