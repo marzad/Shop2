@@ -23,11 +23,12 @@ public class ProductRepo {
         return this.products;
     }
 
-    public void setProducts(List<String> list) {
+    public List<Product> setProducts(List<String> list) {
         for(String str:list){
             id ++;
             products.add(new Product(id, str));
         }
+        return products;
     }
 
     public boolean addProduct(String name){

@@ -53,7 +53,9 @@ class IntegrationsTest {
     @Test
     void getProductByNameTest() throws Exception {
 
-        mockMvc.perform(get("/shop/products").content("apfel")).andExpect(content().string(""));
+        mockMvc.perform(get("/shop/products").content("apfel"))
+                .andExpect(content()
+                        .string(""));
 
     }
 

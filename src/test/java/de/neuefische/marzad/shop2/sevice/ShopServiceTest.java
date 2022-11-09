@@ -55,8 +55,6 @@ class ShopServiceTest {
 
     @Test
     void getOrdersList() {
-        Order expectedOrder = new Order();
-
     }
 
     @Test
@@ -69,5 +67,16 @@ class ShopServiceTest {
 
         assertEquals(result,expectedOrder);
 
+    }
+
+    @Test
+    void addProductsListTest(){
+        List<String> names = new ArrayList<>();
+        List<Product> expected = productRepo.setProducts(names);
+
+        when(productRepo.setProducts(names)).thenReturn(expected);
+        List<Product> result = new ArrayList<>();
+
+        assertEquals(result,expected);
     }
 }
