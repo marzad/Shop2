@@ -4,7 +4,6 @@ import de.neuefische.marzad.shop2.model.Order;
 import de.neuefische.marzad.shop2.model.Product;
 import de.neuefische.marzad.shop2.repository.OrderRepo;
 import de.neuefische.marzad.shop2.repository.ProductRepo;
-import org.apache.tomcat.util.digester.ArrayStack;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -47,7 +46,7 @@ class ShopServiceTest {
         int id = 1;
         Product expectedProduct = new Product(1,"");
 
-        when(productRepo.getProductByID(id)).thenReturn(expectedProduct);
+        when(productRepo.getProductByID(1)).thenReturn(expectedProduct);
 
         Product result = shopService.getProductByID(id);
 

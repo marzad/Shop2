@@ -9,7 +9,7 @@ import java.util.List;
 public class ProductRepo {
     private List<Product> products = new ArrayList<>();
 
-    private int id = 0;
+    private static int id = 0;
 
     public ProductRepo() {
     }
@@ -25,14 +25,14 @@ public class ProductRepo {
 
     public void setProducts(List<String> list) {
         for(String str:list){
-            this.id ++;
-            products.add(new Product(this.id, str));
+            id ++;
+            products.add(new Product(id, str));
         }
     }
 
     public boolean addProduct(String name){
-        this.id ++;
-        return products.add(new Product(this.id,name));
+        id ++;
+        return products.add(new Product(id,name));
     }
 
     public Product getProductByName(String name){
