@@ -56,8 +56,8 @@ public class ShopController {
         shop.addProduct(name);
     }
 
-    @PostMapping("api/products")
+    @PostMapping("api/products/addList")
     public void addProductsList(@RequestBody List<String> names){
-        shop.addProductList(names);
+       shop.addProductList(names);
     }
 }
